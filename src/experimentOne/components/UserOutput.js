@@ -1,22 +1,14 @@
-import React, { Component } from 'react';
-import UserInput from './UserInput';
+import React from 'react';
 
-class UserOutput extends Component {
-    handleOutput = (props) => {
-        return (
-            <h5>Hello, {props.username}</h5>
-        )
-    }
+const userOutput = () => {
+    return <>
+    <p>
+        Hello, I am
+    </p>
+    <p>
 
-    render() {
-        return (
-            <div>
-                <p handleOutput username= {UserInput.props.username}></p>
-                <p></p>
-            </div>
+    </p>
+    </>
+};
 
-        )
-    }
-}
-
-export default UserOutput;
+export default userOutput; 
