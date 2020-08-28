@@ -9,7 +9,7 @@ class StateExperiment extends Component {
       <div className="App">
         <ol>
           <li>Create TWO new components: UserInput and UserOutput</li>
-          <UserOutput name="Bob" nickname="Bildar" />
+          <UserOutput name="Bob" nickname="Bildar">Testing prop children</UserOutput>
           <li>UserInput should hold an input element, UserOutput two paragraphs</li>
           <UserOutput name="Frank" nickname="Hosan"/>
           <li>Output multiple UserOutput components in the App component (any paragraph texts of your choice)</li>

@@ -15,4 +15,8 @@ The purpose of this repository is to practice and share features and skills acqu
 - Creation and integration of custom API
 - MySQL server with stored procedures and relational database design
 - Restricted routing
-- Token based authorization
+- Token based authorization (or Ultimate Authentication)
+- Advanced Express and NodeJS techniques
+- Library of JS based Algorithms and Data Structure related pages
+- Redux server side rendering
+- Potential cloud hosting/configuration
