@@ -20,7 +20,7 @@ const StateExperiment = (props) => {
       names: [
         { name: "Bo-bithia", nickname: "Bildarius" },
         { name: "Jaysoni", nickname: "Jsoney Pepperoni" },
-        { name: "Franken", nickname: "Hostein" },
+        { name: "Franken", nickname: "Hostein" }
       ],
     });
   };
