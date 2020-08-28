@@ -4,7 +4,7 @@ class UserInput extends Component {
     render() {
         return (
             <div>
-                <input ></input>
+                <input username={this.props.value}></input>
             </div>
         )
     }
