@@ -12,6 +12,10 @@ class StateExperiment extends Component {
     ]
   }
 
+  switchUsernameHandler = () => {
+    console.log("Was clicked!")
+  }
+
   render() {
     return (
       <div className="App">
@@ -20,6 +24,7 @@ class StateExperiment extends Component {
           <UserOutput name={this.state.names[0].name} nickname={this.state.names[0].nickname}>
             Testing prop children
           </UserOutput>
+          <button onClick={this.switchUsernameHandler}>Input Username</button>
           <li>
             UserInput should hold an input element, UserOutput two paragraphs
           </li>
