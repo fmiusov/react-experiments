@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import StateExperiment from './experimentOne/stateExperiment';
+// import StateExperiment from './experimentOne/stateExperiment';
 import * as serviceWorker from './serviceWorker';
+import BindingExperiment from './experimentTwo/bindingExperiment';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <StateExperiment />
-  </React.StrictMode>,
+    <BindingExperiment />,
   document.getElementById('root')
 );
 

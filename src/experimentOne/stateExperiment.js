@@ -11,7 +11,7 @@ const StateExperiment = (props) => {
     ],
   });
 
-  const [bonusState, setBonusState] = useState('this is the bonus state')
+  const [bonusState] = useState('this is the bonus state')
 
   console.log(namesState, bonusState)
 
