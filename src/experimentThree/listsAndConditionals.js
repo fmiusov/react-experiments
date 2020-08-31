@@ -2,6 +2,17 @@ import React, { Component } from 'react';
 import './style.css';
 
 class ListsAndConditionals extends Component {
+
+  characterCounter = (event) => {
+    const count = [...this.event.target.value]
+
+    return (
+      <p>
+        {count}
+      </p>
+    )
+  }
+
   render() {
     return (
       <div className="body">
@@ -14,6 +25,8 @@ class ListsAndConditionals extends Component {
           <li>When you click a CharComponent, it should be removed from the entered text.</li>
         </ol>
         <p>Hint: Keep in mind that JavaScript strings are basically arrays!</p>
+        <input type='text' onChange={characterCounter}></input>
+        <p></p>
       </div>
     );
   }
