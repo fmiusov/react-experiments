@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 // import StateExperiment from './experimentOne/stateExperiment';
 import * as serviceWorker from './serviceWorker';
-import BindingExperiment from './experimentTwo/bindingExperiment';
+import ListsAndConditionals from './experimentThree/listsAndConditionals';
 
 ReactDOM.render(
-    <BindingExperiment />,
+    <ListsAndConditionals />,
   document.getElementById('root')
 );
 

@@ -5,6 +5,7 @@ class ListsAndConditionals extends Component {
 
   characterCounter = (event) => {
     const count = [...this.event.target.value]
+    console.log(...this.event.target.value)
 
     return (
       <p>
