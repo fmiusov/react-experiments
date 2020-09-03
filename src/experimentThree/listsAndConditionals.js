@@ -2,16 +2,14 @@ import React, { Component } from 'react';
 import './style.css';
 
 class ListsAndConditionals extends Component {
+  state = {
+    length: 0
+  };
 
   characterCounter = (event) => {
-    const count = [...this.event.target.value]
-    console.log(...this.event.target.value)
-
-    return (
-      <p>
-        {count}
-      </p>
-    )
+      this.setState({
+        length: event.target.value.length
+      })
   }
 
   render() {
@@ -27,7 +25,7 @@ class ListsAndConditionals extends Component {
         </ol>
         <p>Hint: Keep in mind that JavaScript strings are basically arrays!</p>
         <input type='text' onChange={this.characterCounter}></input>
-        <p></p>
+        <p>{this.state.length} character(s)</p>
       </div>
     );
   }
