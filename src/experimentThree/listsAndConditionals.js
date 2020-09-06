@@ -14,6 +14,12 @@ class ListsAndConditionals extends Component {
       })
   }
 
+  deleteCharHandler = (charIndex) => {
+    const chars = [...this.state.chars];
+    chars.splice(charIndex, 1);
+    this.setState({chars: chars});
+  }
+
   render() {
     return (
       <div className="body">
@@ -26,8 +32,9 @@ class ListsAndConditionals extends Component {
           <li>When you click a CharComponent, it should be removed from the entered text.</li>
         </ol>
         {/* <p>Hint: Keep in mind that JavaScript strings are basically arrays!</p> */}
-        {this.state.length.map(char => {
-          return <CharBox />
+        {this.state.length.map((char, index) => {
+          return <CharBox
+                  click={() => this.deleteCharHandler(index)} />
         })}
         <input type='text' onChange={this.characterCounter}></input>
         <p>{this.state.length} character(s)</p>
