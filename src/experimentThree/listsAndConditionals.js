@@ -26,8 +26,8 @@ class ListsAndConditionals extends Component {
         {this.state.length.map((char, index) => {
           return <CharBox click={() => this.deleteCharHandler(index)} />;
         })}
-        <input type="text" onChange={this.inputChangedHandler}></input>
-        <p>{this.state.length} character(s)</p>
+        <input type="text" onChange={this.inputChangedHandler} value={this.state.userInput}></input>
+        <p>{this.state.userInput} character(s)</p>
         <Validation length={this.state.length} />
       </div>
     );
