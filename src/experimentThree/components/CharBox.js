@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
-import "./style.css"
+import React from 'react';
 
-class CharBox extends Component {
-    
-
-    render () {
-        return (        
-            <>
-                <p className="char">
-                   {this.props.length.index}
-                </p>
-            </>
-        );
-    };
+const char = (props) => {
+    const style = {
+        display: 'inline-block',
+        padding: '16px',
+        margin: '16px',
+        border: '1px solid black',
+        textAlign: 'center'
+    }
+    return (
+        <div style={style} onClick={props.clicked}>
+            {props.character}
+        </div>
+    )
 };
 
-export default CharBox;
+export default char;
