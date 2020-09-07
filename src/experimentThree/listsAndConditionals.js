@@ -14,9 +14,16 @@ class ListsAndConditionals extends Component {
     });
   };
 
+  deleteCharHandler = ( index ) => {
+    const text = this.state.userInput.split('');
+    text.splice(index, 1);
+    const updatedText = text.join('');
+    this.setState({userInput: updatedText});
+  }
+
   render() {
     const charList = this.state.userInput.split('').map((char, index) => {
-      return <Char character={char} key={index} />
+      return <Char character={char} key={index} clicked={() => this.deleteCharHandler(index)} />
     })
 
     return (
