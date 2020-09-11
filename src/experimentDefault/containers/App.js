@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import "./App.css";
+
+import classes from "./App.css";
 import Persons from "../components/Persons/Persons";
+import Cockpit from "../components/Cockpit/Cockpit";
 
 class ExperimentDefault extends Component {
   state = {
@@ -45,44 +47,24 @@ class ExperimentDefault extends Component {
   };
 
   render() {
-    const style = {
-      backgroundColor: "green",
-      color: "white",
-      font: "inherit",
-      border: "1px solid blue",
-      padding: "8px",
-      cursor: "pointer",
-      ":hover": {
-        backgroundColor: "lightgreen",
-        color: "black",
-      },
-    };
-
-    let persons = [];
+    let persons = null;
 
     if (this.state.showPersons) {
       persons = (
-        <div>
           <Persons
             persons={this.state.persons}
             clicked={this.deletePersonHandler}
             changed={this.nameChangedHandler}
           />
-        </div>
       );
-
-      style.backgroundColor = "red";
-      style[":hover"] = {
-        backgroundColor: "salmon",
-        color: "black",
-      };
     }
 
-
-
     return (
-      <div className="App">
-        
+      <div className={classes.App}>
+        <Cockpit
+          showPersons={this.state.showPersons}
+          persons={this.state.persons}
+        />
         {persons}
       </div>
     );
