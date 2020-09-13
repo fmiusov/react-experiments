@@ -5,7 +5,7 @@ import * as serviceWorker from './serviceWorker';
 import ExperimentDefault from './experimentDefault/containers/App';
 
 ReactDOM.render(
-    <ExperimentDefault />,
+    <ExperimentDefault appTitle="Person Manager"/>,
   document.getElementById('root')
 );
 
