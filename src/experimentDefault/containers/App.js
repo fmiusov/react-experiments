@@ -33,14 +33,14 @@ class ExperimentDefault extends Component {
     console.log("[App.js] componentDidMount");
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    console.log("[App.js] shouldComponentUpdate");
-    if (nextProps.persons !== this.props.persons) {
-      return true;
-    } else {
-      return false;
-    }
-  }
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   console.log("[App.js] shouldComponentUpdate");
+  //   if (nextProps.persons !== this.props.persons) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // }
 
   componentDidUpdate() {
     console.log("[App.js] componentDidUpdate");
