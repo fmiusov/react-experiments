@@ -5,7 +5,7 @@ import Aux from "../../../hoc/Auxilliary";
 class Person extends Component {
 
   componentDidMount() {
-    document.querySelector('input').focus();
+    this.inputElement.focus();
   }
 
   render() {
@@ -18,6 +18,7 @@ class Person extends Component {
           </p>
           <p key="i2" >{this.props.children}</p>
           <input
+            ref={(inputEl) => {this.inputElement = inputEl}}
             key="i3"
             type="text"
             onChange={this.props.changed}
