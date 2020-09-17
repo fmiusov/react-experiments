@@ -3,9 +3,13 @@ import classes from "./Person.css";
 import Aux from "../../../hoc/Auxilliary";
 
 class Person extends Component {
-
+  constructor(props) {
+    super(props);
+    this.inputElementRef = React.createRef();
+  }
   componentDidMount() {
-    document.querySelector('input').focus();
+    // this.inputElement.focus();
+    this.inputElementRef.current.focus();
   }
 
   render() {
@@ -18,6 +22,8 @@ class Person extends Component {
           </p>
           <p key="i2" >{this.props.children}</p>
           <input
+            // ref={(inputEl) => {this.inputElement = inputEl}}
+            ref={this.inputElementRef}
             key="i3"
             type="text"
             onChange={this.props.changed}
