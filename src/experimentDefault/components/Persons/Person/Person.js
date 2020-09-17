@@ -3,6 +3,11 @@ import classes from "./Person.css";
 import Aux from "../../../hoc/Auxilliary";
 
 class Person extends Component {
+
+  componentDidMount() {
+    document.querySelector('input').focus();
+  }
+
   render() {
     console.log("[Person.js] rendering...");
     return (
